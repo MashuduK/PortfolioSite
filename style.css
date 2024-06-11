@@ -8,7 +8,6 @@ body {
 
 /* Background Gradient */
 body {
-    /* Multi-stop gradient for a smoother transition */
     background: linear-gradient(45deg, #222831, #393E46, #00ADB5); /* Darker gradient with teal accent */
     background-attachment: fixed;
 }
@@ -18,9 +17,9 @@ nav {
     background-color: rgba(34, 40, 49, 0.8); /* Slightly transparent dark background */
     padding: 1em 0;
     text-align: center;
-    position: fixed; /* Keep the nav bar at the top even when scrolling */
-    width: 100%; /* Make the nav bar full width */
-    z-index: 10; /* Ensure nav bar is above other content */
+    position: fixed; 
+    width: 100%; 
+    z-index: 10; 
 }
 
 nav ul {
@@ -42,7 +41,9 @@ nav a {
 
 nav a:hover {
     color: #f39c12; /* Neon color on hover */
+    text-shadow: 0 0 5px #f39c12; /* Add neon glow on hover */
 }
+
 
 /* Header */
 header {
@@ -51,7 +52,7 @@ header {
 }
 
 h1, h2 {
-    text-shadow: 2px 2px 4px #000000; /* Add a subtle text shadow */
+    text-shadow: 2px 2px 4px #000000; 
 }
 
 /* About Section */
@@ -59,8 +60,8 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Make the section take up full viewport height */
-    padding-top: 5em; /* Add padding to account for fixed nav bar */
+    min-height: 100vh;
+    padding-top: 5em; 
 }
 
 .about-container {
@@ -83,7 +84,7 @@ h1, h2 {
     flex: 1;
 }
 
-#learnMoreButton {
+#learnMoreButton, #cvButton { /* Styling for both buttons */
     background-color: #2980b9;
     color: white;
     padding: 0.8em 1.5em;
@@ -91,10 +92,24 @@ h1, h2 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 10px; /* Add space between buttons */
 }
 
-#learnMoreButton:hover {
+#learnMoreButton:hover, #cvButton:hover {
     background-color: #f39c12;
+}
+
+/* Expanded About Me Text Styling */
+#about-paragraph.expanded {
+    max-height: 500px; 
+    overflow-y: auto;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Initial State (collapsed) */
+#about-paragraph {
+    max-height: 100px;
+    overflow: hidden;
 }
 
 /* Roles & Skills Sections */
@@ -120,8 +135,13 @@ h1, h2 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 }
 
+.skills-list li:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
 .skills-list li i {
-    margin-right: 0.5em;
+    margin-right: 0.5em; 
     color: #f39c12; 
 }
 
@@ -148,9 +168,62 @@ h1, h2 {
     align-items: center;
 }
 
+/* Projects Section */
+#projects {
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2em;
+}
+
+.project-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+
+
+
 /* Contact Section & Footer */
 #contact, footer {
     background-color: rgba(34, 40, 49, 0.8); 
     padding: 1em 0;
     text-align: center;
 }
+/* Call to Action */
+#call-to-action {
+  background-color: #00ADB5; /* Teal background */
+  color: white;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #222831; /* Dark background for button */
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #f39c12; /* Neon color on hover */
+}
+
