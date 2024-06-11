@@ -17,10 +17,8 @@ nav {
     background-color: rgba(34, 40, 49, 0.8); /* Slightly transparent dark background */
     padding: 1em 0;
     text-align: center;
-    position: fixed; 
-    width: 100%; 
-    z-index: 10; 
-}
+    position: static; /* Change position to static */
+  }
 
 nav ul {
     list-style: none;
@@ -257,4 +255,19 @@ h1, h2 {
     margin-bottom: 1em;
     border-radius: 5px;
   }
-  
+  /* Background Video */
+.background-video {
+    position: fixed; /* Ensures the video stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%; /* Or set a specific width */
+    height: 100%; /* Or set a specific height */
+    object-fit: cover; /* Cover the entire area without distorting the video */
+    z-index: -1;  /* Put the video behind all other elements */
+}
+
+/* Other Content */
+header, section, footer {
+    position: relative; /* Ensure these elements are positioned relative to the body */
+    z-index: 1;  /* Make sure they are on top of the video */
+}
