@@ -227,3 +227,34 @@ h1, h2 {
   background-color: #f39c12; /* Neon color on hover */
 }
 
+/* ... (other styles) ... */
+
+/* Projects Section */
+#projects {
+    padding: 2em;
+    border-radius: 10px;
+  }
+  
+  .projects-container {
+    display: flex; /* Use flexbox for horizontal arrangement */
+    justify-content: space-around; /* Distribute items evenly */
+    gap: 2em; /* Add space between project items */
+  }
+  
+  .project-item {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1; /* Allow projects to take up equal space */
+    min-width: 250px; /* Set a minimum width to prevent them from getting too narrow */
+  }
+  
+  .project-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 5px;
+  }
+  
